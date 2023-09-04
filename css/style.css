@@ -1,0 +1,48 @@
+/* Card */
+.card {
+  width: 100%;
+  max-width: 275px;
+  margin: 0 auto;
+  height: 300px;
+  display: flex;
+  background-color: rgb(20, 19, 19);
+  color: aliceblue;
+  align-items: center;
+  text-align: center;
+  transition: all .25s;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+/* 
+hp = horizontal positive
+hn = horizontal negative
+vp = vertical positive
+vn = vertical negative
+*/
+/* Perspective Horizontal */
+.card.hp {
+  transform: perspective(600px) rotateY(30deg);
+}
+.card.hn {
+  transform: perspective(600px) rotateY(-30deg);
+}
+/* Perspective Vertical */
+.card.vp {
+  transform: perspective(600px) rotateX(30deg);
+}
+.card.vn {
+  transform: perspective(600px) rotateX(-30deg);
+}
+/* Card hover animation */
+.card:hover {
+  background-color: rosybrown;
+  transform: perspective(0px) rotateY(0deg);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+.card-content {
+  padding: 15px;
+}
+.card-content i {
+  font-size: 3rem;
+}
